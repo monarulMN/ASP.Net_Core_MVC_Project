@@ -1,0 +1,54 @@
+﻿@using U_OnlineBazer.Models;
+@model IEnumerable<ProductType>
+@{
+    ViewData["Title"] = "Index";
+}
+<div class="d-sm-flex justify-content-between">
+    <h2 class="text-info">Product Type</h2>
+    <a asp-action="Create" class="btn btn-info"> &nbsp;<i class="bi bi-plus-lg"></i> New Product Type</a>
+</div>
+<hr />
+
+<div>
+    <table class="table table-striped border">
+        <tr class="table-info">
+            <th>
+                @Html.DisplayNameFor(c=>c.ProductTypes)
+            </th>
+            <th></th>
+            <th></th>
+        </tr>
+        @foreach(var item in Model)
+        {
+            <tr>
+                <td>@item.ProductTypes</td>
+                <td>
+                    <partial name="_ButtonPartial" model="@item.Id"/>
+                </td>
+            </tr>
+        }
+    </table>
+</div>
+
+
+
+@section scripts {
+    <script src="~/lib/alertifyjs/alertify.js"></script>
+    <script src="~/lib/alertifyjs/alertify.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            var save = '@TempData["save"]'
+            if (save != '') {
+                alertify.success(save);
+            }
+            var edit = '@TempData["edit"]'
+            if (edit != '') {
+                alertify.success(edit);
+            }
+            var del = '@TempData["delete"]'
+            if (del != '') {
+                alertify.error(del);
+            }
+        })
+    </script>
+}
