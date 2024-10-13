@@ -124,7 +124,7 @@ namespace U_OnlineBazer.Areas.Admin.Controllers
             {
                 _dbContext.Remove(specialTag);
                 await _dbContext.SaveChangesAsync();
-                TempData["delete"] = "Delete Successfully";
+                TempData["del"] = "Delete Successfully";
                 return RedirectToAction(nameof(Index));
             }
             return View(specialTag);

@@ -1,19 +1,31 @@
-﻿﻿@using U_OnlineBazer.Models;
-@model IEnumerable<SpecialTag>
+﻿@using U_OnlineBazer.Models;
+@model IEnumerable<Product>
 @{
     ViewData["Title"] = "Index";
 }
-
 <div class="d-sm-flex justify-content-between">
-    <h2 class="text-info">Special Tag List</h2>
-    <a asp-action="Create" class="btn btn-info"><i class="bi bi-plus-lg"></i>&nbsp; New Tag Name</a>
+    <h2 class="text-info">Product List</h2>
+    <a asp-action="Create" class="btn btn-info"> &nbsp;<i class="bi bi-plus-lg"></i>Add New Product</a>
 </div>
 <hr />
+
 <div>
     <table class="table table-striped border">
         <tr class="table-info">
             <th>
                 @Html.DisplayNameFor(c => c.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(c => c.Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(c => c.ProductColor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(c => c.IsAvailable)
+            </th>
+            <th>
+                @Html.DisplayNameFor(c => c.ProductId)
             </th>
             <th></th>
             <th></th>
@@ -22,8 +34,12 @@
         {
             <tr>
                 <td>@item.Name</td>
+                <td>@item.Price</td>
+                <td>@item.ProductColor</td>
+                <td>@item.IsAvailable</td>
+                <td>@item.ProductTypes.ProductTypes</td>
                 <td>
-                    <partial name="_TagPageButtonPartial" model="@item.Id" />
+                    <partial name="_ButtonPartial" model="@item.Id" />
                 </td>
             </tr>
         }
@@ -31,10 +47,11 @@
 </div>
 
 
+
 @section scripts {
     <script src="~/lib/alertifyjs/alertify.js"></script>
-    <script src="~/lib/alertifyjs/alertify.min.js"></script> 
-    @* <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.14.0/build/alertify.min.js"></script> *@
+    <script src="~/lib/alertifyjs/alertify.min.js"></script>
+    @* <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.14.0/build/alertify.min.js"> *@
     <script type="text/javascript">
         $(function () {
             var save = '@TempData["save"]'
@@ -52,4 +69,3 @@
         })
     </script>
 }
-

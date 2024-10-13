@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using U_OnlineBazer.Data;
 using U_OnlineBazer.Models;
 
@@ -72,7 +71,7 @@ namespace U_OnlineBazer.Areas.Admin.Controllers
             {
                 _dbContext.Update(productType);
                 await _dbContext.SaveChangesAsync();
-                TempData["Edit"] = "Edit Successfully";
+                TempData["edit"] = "Edit Successfully";
                 return RedirectToAction(nameof(Index));
             }
             return View(productType);
@@ -125,7 +124,7 @@ namespace U_OnlineBazer.Areas.Admin.Controllers
             {
                 _dbContext.Remove(productType);
                 await _dbContext.SaveChangesAsync();
-                TempData["delete"] = "Delete Successfully";
+                TempData["del"] = "Delete Successfully";
                 return RedirectToAction(nameof(Index));
             }
             return View(productType);
