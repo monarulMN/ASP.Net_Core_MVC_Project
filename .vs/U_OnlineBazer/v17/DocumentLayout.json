@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "G:\\U_OnlineBazer\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{89E7577D-9556-4935-99B7-13B49D0FB5B8}|U_OnlineBazer\\U_OnlineBazer.csproj|g:\\u_onlinebazer\\u_onlinebazer\\areas\\admin\\views\\product\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{89E7577D-9556-4935-99B7-13B49D0FB5B8}|U_OnlineBazer\\U_OnlineBazer.csproj|solutionrelative:u_onlinebazer\\areas\\admin\\views\\product\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{89E7577D-9556-4935-99B7-13B49D0FB5B8}|U_OnlineBazer\\U_OnlineBazer.csproj|g:\\u_onlinebazer\\u_onlinebazer\\areas\\admin\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{89E7577D-9556-4935-99B7-13B49D0FB5B8}|U_OnlineBazer\\U_OnlineBazer.csproj|solutionrelative:u_onlinebazer\\areas\\admin\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{89E7577D-9556-4935-99B7-13B49D0FB5B8}|U_OnlineBazer\\U_OnlineBazer.csproj|g:\\u_onlinebazer\\u_onlinebazer\\areas\\admin\\controllers\\producttypescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{89E7577D-9556-4935-99B7-13B49D0FB5B8}|U_OnlineBazer\\U_OnlineBazer.csproj|solutionrelative:u_onlinebazer\\areas\\admin\\controllers\\producttypescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{89E7577D-9556-4935-99B7-13B49D0FB5B8}|U_OnlineBazer\\U_OnlineBazer.csproj|g:\\u_onlinebazer\\u_onlinebazer\\areas\\admin\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{89E7577D-9556-4935-99B7-13B49D0FB5B8}|U_OnlineBazer\\U_OnlineBazer.csproj|solutionrelative:u_onlinebazer\\areas\\admin\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89E7577D-9556-4935-99B7-13B49D0FB5B8}|U_OnlineBazer\\U_OnlineBazer.csproj|g:\\u_onlinebazer\\u_onlinebazer\\areas\\admin\\controllers\\producttypescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{89E7577D-9556-4935-99B7-13B49D0FB5B8}|U_OnlineBazer\\U_OnlineBazer.csproj|solutionrelative:u_onlinebazer\\areas\\admin\\controllers\\producttypescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{89E7577D-9556-4935-99B7-13B49D0FB5B8}|U_OnlineBazer\\U_OnlineBazer.csproj|g:\\u_onlinebazer\\u_onlinebazer\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -34,11 +38,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "G:\\U_OnlineBazer\\U_OnlineBazer\\Areas\\Admin\\Views\\Product\\Create.cshtml",
+              "RelativeDocumentMoniker": "U_OnlineBazer\\Areas\\Admin\\Views\\Product\\Create.cshtml",
+              "ToolTip": "G:\\U_OnlineBazer\\U_OnlineBazer\\Areas\\Admin\\Views\\Product\\Create.cshtml",
+              "RelativeToolTip": "U_OnlineBazer\\Areas\\Admin\\Views\\Product\\Create.cshtml",
+              "ViewState": "AQIAACEAAAAAAAAAAAAAAAwAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-13T20:20:12.358Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -48,53 +65,53 @@
               "RelativeDocumentMoniker": "U_OnlineBazer\\Areas\\Admin\\Views\\Product\\Index.cshtml",
               "ToolTip": "G:\\U_OnlineBazer\\U_OnlineBazer\\Areas\\Admin\\Views\\Product\\Index.cshtml",
               "RelativeToolTip": "U_OnlineBazer\\Areas\\Admin\\Views\\Product\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAABjAAAA",
+              "ViewState": "AQIAAC4AAAAAAAAAAAAAADEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-10-12T18:55:34.835Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "ProductController.cs",
               "DocumentMoniker": "G:\\U_OnlineBazer\\U_OnlineBazer\\Areas\\Admin\\Controllers\\ProductController.cs",
               "RelativeDocumentMoniker": "U_OnlineBazer\\Areas\\Admin\\Controllers\\ProductController.cs",
               "ToolTip": "G:\\U_OnlineBazer\\U_OnlineBazer\\Areas\\Admin\\Controllers\\ProductController.cs",
               "RelativeToolTip": "U_OnlineBazer\\Areas\\Admin\\Controllers\\ProductController.cs",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAAACcAAAA3AAAA",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAABoAAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-12T18:43:00.729Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Product.cs",
               "DocumentMoniker": "G:\\U_OnlineBazer\\U_OnlineBazer\\Models\\Product.cs",
               "RelativeDocumentMoniker": "U_OnlineBazer\\Models\\Product.cs",
               "ToolTip": "G:\\U_OnlineBazer\\U_OnlineBazer\\Models\\Product.cs",
               "RelativeToolTip": "U_OnlineBazer\\Models\\Product.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAAABUAAAAaAAAA",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAAAAcAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-12T17:06:34.705Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "ProductTypesController.cs",
               "DocumentMoniker": "G:\\U_OnlineBazer\\U_OnlineBazer\\Areas\\Admin\\Controllers\\ProductTypesController.cs",
               "RelativeDocumentMoniker": "U_OnlineBazer\\Areas\\Admin\\Controllers\\ProductTypesController.cs",
               "ToolTip": "G:\\U_OnlineBazer\\U_OnlineBazer\\Areas\\Admin\\Controllers\\ProductTypesController.cs",
               "RelativeToolTip": "U_OnlineBazer\\Areas\\Admin\\Controllers\\ProductTypesController.cs",
-              "ViewState": "AQIAACMAAAAAAAAAAAAAACwAAAAJAAAA",
+              "ViewState": "AQIAAF0AAAAAAAAAAAAAACwAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-12T05:37:53.446Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "SpecialTagController.cs",
               "DocumentMoniker": "G:\\U_OnlineBazer\\U_OnlineBazer\\Areas\\Admin\\Controllers\\SpecialTagController.cs",
               "RelativeDocumentMoniker": "U_OnlineBazer\\Areas\\Admin\\Controllers\\SpecialTagController.cs",
@@ -107,7 +124,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "G:\\U_OnlineBazer\\U_OnlineBazer\\Data\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "U_OnlineBazer\\Data\\ApplicationDbContext.cs",

@@ -9,10 +9,12 @@ namespace U_OnlineBazer.Areas.Admin.Controllers
     public class ProductController : Controller
     {
         private readonly ApplicationDbContext _dbContext;
+        private readonly IWebHostEnvironment _webHostEnvironment;
 
-        public ProductController(ApplicationDbContext dbContext)
+        public ProductController(ApplicationDbContext dbContext, IWebHostEnvironment webHostEnvironment)
         {
             _dbContext = dbContext;
+            _webHostEnvironment = webHostEnvironment;
         }
         public IActionResult Index()
         {
@@ -31,10 +33,16 @@ namespace U_OnlineBazer.Areas.Admin.Controllers
 
         [HttpPost]
         //[ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(Product product)
+        public async Task<IActionResult> Create(Product product, IFormFile image)
         {
             if (ModelState.IsValid)
             {
+                if(image != null)
+                {
+                    var name = Path.Combine(_webHostEnvironment.WebRootPath + "Images", Path.GetFileName(image.FileName));
+                    await image.CopyToAsync(new FileStream(name, FileMode.Create));
+                    product.Image = "Images/" + image.FileName;
+                }
                 _dbContext.Products.Add(product);
                 await _dbContext.SaveChangesAsync();
                 TempData["save"] = "Save Successfully";
