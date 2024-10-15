@@ -6,7 +6,7 @@
 
 <h2 class="text-info">Add New Product</h2>
 <form asp-action="Create" method="post" enctype="multipart/form-data">
-    <div class="p-4 rounded border">
+    <div class="p-4 rounded border-outline-0">
         <div asp-validation-summary="ModelOnly" class="text-danger">
         </div>
         <h3>@ViewBag.message</h3>
@@ -33,7 +33,7 @@
                 <label asp-for="Image"></label>
             </div>
             <div class="col-5">
-                <input asp-for="Image" class="form-control" type="file" />
+                <input asp-for="Image" class="form-control " type="file" />
             </div>
             <span asp-validation-for="Image" class="text-danger"></span>
         </div>
@@ -51,7 +51,7 @@
                 <label asp-for="ProductId"></label>
             </div>
             <div class="col-5">
-                <select asp-for="ProductId" asp-items="ViewBag.productTypeId" class="form-control"></select>
+                <select asp-for="ProductId" asp-items="ViewBag.ProductId" class="form-control"></select>
                 @*<input asp-for="ProductTypeId" class="form-control"/>*@
             </div>
             <span asp-validation-for="ProductId" class="text-danger"></span>

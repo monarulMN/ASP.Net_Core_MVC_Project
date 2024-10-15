@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("U_OnlineBazer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+20fc086f2af0e87fbc49f80fe7b28f3d4ceec801")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e666f181940c8e9fa8c1cdfc5e9af1dcad008271")]
 [assembly: System.Reflection.AssemblyProductAttribute("U_OnlineBazer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("U_OnlineBazer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

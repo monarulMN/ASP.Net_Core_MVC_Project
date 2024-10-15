@@ -35,6 +35,23 @@
 
   <ItemGroup>
     <None Include="Views\Shared\_TagPageButtonPartial.cshtml" />
+    <None Include="wwwroot\Images\10.jpg" />
+    <None Include="wwwroot\Images\6.jpg" />
+    <None Include="wwwroot\Images\7.jpg" />
+    <None Include="wwwroot\Images\718mehhjxfl._ac_sl1500__1_1_1.jpg" />
+    <None Include="wwwroot\Images\8.jpg" />
+    <None Include="wwwroot\Images\applle.jpeg" />
+    <None Include="wwwroot\Images\dell1.jpg" />
+    <None Include="wwwroot\Images\dell2.jpg" />
+    <None Include="wwwroot\Images\dell3.jpg" />
+    <None Include="wwwroot\Images\giant_14465.jpg" />
+    <None Include="wwwroot\Images\hp1.jpg" />
+    <None Include="wwwroot\Images\hp2.jpeg" />
+    <None Include="wwwroot\Images\instock-logo.png" />
+    <None Include="wwwroot\Images\noimage.PNG" />
+    <None Include="wwwroot\Images\notinstock.jpg" />
+    <None Include="wwwroot\Images\s1.jpg" />
+    <None Include="wwwroot\Images\TB1f4LzNFXXXXalapXXXXXXXXXX_!!0-item_pic.jpg" />
   </ItemGroup>
 
 </Project>

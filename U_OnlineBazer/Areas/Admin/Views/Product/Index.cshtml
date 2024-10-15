@@ -27,6 +27,9 @@
             <th>
                 @Html.DisplayNameFor(c => c.ProductId)
             </th>
+            <th>
+                @Html.DisplayNameFor(c => c.SpecialTagId)
+            </th>
             <th></th>
             <th></th>
         </tr>
@@ -38,6 +41,7 @@
                 <td>@item.ProductColor</td>
                 <td>@item.IsAvailable</td>
                 <td>@item.ProductTypes.ProductTypes</td>
+                <td>@item.SpecialTags.Name</td>
                 <td>
                     <partial name="_ButtonPartial" model="@item.Id" />
                 </td>
