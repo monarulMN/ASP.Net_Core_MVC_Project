@@ -1,7 +1,21 @@
 ﻿@model U_OnlineBazer.Models.Product
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Detail";
 }
+@using U_OnlineBazer.Utility
+@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccessor
+@{
+
+    List<Product> products = HttpContextAccessor.HttpContext.Session.Get<List<Product>>("products");
+    Product product = null;
+    if (products != null)
+    {
+        product = products.FirstOrDefault(c => c.Id == Model.Id);
+    }
+    
+}
+
 <br />
 
 <h2 class="text-info">Product Details</h2>
@@ -30,15 +44,6 @@
                 </div>
                 <span asp-validation-for="Price" class="text-danger"></span>
             </div>
-            @* <div class="form-group row mb-3">
-            <div class="col-4">
-            <label asp-for="Image"></label>
-            </div>
-            <div class="col-8">
-            <input asp-for="Image" class="form-control " type="file" />
-            </div>
-            <span asp-validation-for="Image" class="text-danger"></span>
-            </div> *@
             <div class="form-group row mb-3">
                 <div class="col-4">
                     <label asp-for="ProductColor"></label>
@@ -63,12 +68,19 @@
                     
                 </div>
                 <div class="col-8">
-                  <input type="submit" class="=btn btn-info rounded" value="Add To Cart" />  
+                    @if(product != null)
+                    {
+                        <button type="submit" class=" btn btn-danger form-control" asp-action="Remove" asp-route-id="@Model.Id">Remove To Cart</button>
+                    }
+                    else
+                    {
+                        <input type="submit" class="=btn btn-info form-control rounded" value="Add To Cart" />
+                    }
+                     
                 </div>
                 
             </div>
             <div class="form-group">
-                <a type="button" asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Edit</a>
                 <a asp-action="Index" class="btn btn-success">Back to List</a>
             </div>
         </div>

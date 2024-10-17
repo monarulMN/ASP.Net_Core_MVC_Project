@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
 using U_OnlineBazer.Data;
 using U_OnlineBazer.Models;
+using U_OnlineBazer.Utility;
 
 namespace U_OnlineBazer.Areas.Customer.Controllers
 {
@@ -35,7 +36,7 @@ namespace U_OnlineBazer.Areas.Customer.Controllers
 
         //GET Product Details Action Method
 
-        public ActionResult Details(int? id)
+        public ActionResult Detail(int? id)
         {
             if (id == null)
             {
@@ -48,5 +49,53 @@ namespace U_OnlineBazer.Areas.Customer.Controllers
             }
             return View(product);
         }
+
+
+        //GET Product Details Action Method
+
+        [HttpPost]
+        [ActionName("Detail")]
+        public ActionResult ProductDetail(int? id)
+        {
+            List<Product> products = new List<Product>();
+            if (id == null)
+            {
+                return NotFound();
+            }
+            var product = _dbContext.Products.Include(c => c.ProductTypes).FirstOrDefault(c => c.Id == id);
+            if (product == null)
+            {
+                return NotFound();
+            }
+            products = HttpContext.Session.Get<List<Product>>("products");
+            if(products == null)
+            {
+                products = new List<Product>();
+            }
+            products.Add(product);
+            HttpContext.Session.Set("products", products);
+            return View(product);
+        }
+
+        //GET Remove action Method
+
+        [HttpPost]
+        [ActionName("Remove")]
+        public IActionResult RemoveToCCart(int? id)
+        {
+            List<Product> products = HttpContext.Session.Get<List<Product>>("products");
+            if(products != null)
+            {
+                var product = products.FirstOrDefault(c=>c.Id==id);
+                if(product != null)
+                {
+                    products.Remove(product);
+                    HttpContext.Session.Set("products",products);
+                }
+            }
+            return RedirectToAction(nameof(Index));
+        }
+
+
     }
 }
