@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
 using U_OnlineBazer.Data;
 using U_OnlineBazer.Models;
@@ -10,15 +11,15 @@ namespace U_OnlineBazer.Areas.Customer.Controllers
     {
         private readonly ApplicationDbContext _dbContext;
 
-        public HomeController (ApplicationDbContext dbContext)
+        public HomeController(ApplicationDbContext dbContext)
         {
             _dbContext = dbContext;
         }
 
-        public IActionResult Index(int? page)
+        public IActionResult Index()
         {
-            return View();
-            //return View(_dbContext.Products.Include(c => c.ProductTypes).Include(c => c.SpecialTag).ToList().ToPagedList(page ?? 1, 9));
+            //return View();
+            return View(_dbContext.Products.Include(c => c.ProductTypes).Include(c => c.SpecialTags).ToList().ToList());
         }
 
         public IActionResult Privacy()
@@ -30,6 +31,22 @@ namespace U_OnlineBazer.Areas.Customer.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+        //GET Product Details Action Method
+
+        public ActionResult Details(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+            var product = _dbContext.Products.Include(c => c.ProductTypes).FirstOrDefault(c=>c.Id==id);
+            if (product == null)
+            {
+                return NotFound();
+            }
+            return View(product);
         }
     }
 }

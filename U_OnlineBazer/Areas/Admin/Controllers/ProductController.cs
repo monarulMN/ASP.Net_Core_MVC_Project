@@ -24,6 +24,20 @@ namespace U_OnlineBazer.Areas.Admin.Controllers
         }
 
 
+        //POST Index Action Method
+        [HttpPost]
+        public IActionResult Index(decimal? lowAmount, decimal? largeAmount)
+        {
+            var products = _dbContext.Products.Include(c => c.ProductTypes).Include(c => c.SpecialTags).Where(c =>
+            c.Price >= lowAmount && c.Price <= largeAmount).ToList();
+            if(lowAmount==null || largeAmount == null)
+            {
+                products = _dbContext.Products.Include(c => c.ProductTypes).Include(c => c.SpecialTags).ToList();
+            }
+            return View(products);
+        }
+
+
         //GET Create Action Method
         public ActionResult Create()
         {
@@ -51,14 +65,14 @@ namespace U_OnlineBazer.Areas.Admin.Controllers
 
                 if (image != null)
                 {
-                    var name = Path.Combine(_webHostEnvironment.WebRootPath + "Images",
+                    String name = Path.Combine(_webHostEnvironment.WebRootPath + "/Images",
                         Path.GetFileName(image.FileName));
                     await image.CopyToAsync(new FileStream(name, FileMode.Create));
                     product.Image = "Images/" + image.FileName;
                 }
                 if (image == null)
                 {
-                    product.Image = "Images/instock-Logo.png";
+                    product.Image = "Images/hp2.jpeg";
                 }
                 _dbContext.Products.Add(product);
                 await _dbContext.SaveChangesAsync();
@@ -113,7 +127,7 @@ namespace U_OnlineBazer.Areas.Admin.Controllers
                 }
                 if (image == null)
                 {
-                    product.Image = "Images/applle.jpeg";
+                    product.Image = "Images/hp2.jpeg";
                 }
                 _dbContext.Products.Update(product);
                 await _dbContext.SaveChangesAsync();
