@@ -1,6 +1,6 @@
 ﻿@model U_OnlineBazer.Models.Product
 @{
-    ViewData["Title"] = "Detail";
+    ViewData["Title"] = "Details";
 }
 @using U_OnlineBazer.Utility
 @using Microsoft.AspNetCore.Http
@@ -70,7 +70,7 @@
                 <div class="col-8">
                     @if(product != null)
                     {
-                        <button type="submit" class=" btn btn-danger form-control" asp-action="Remove" asp-route-id="@Model.Id">Remove To Cart</button>
+                        <button type="submit" class=" btn btn-danger form-control rounded" asp-action="Remove" asp-route-id="@Model.Id">Remove To Cart</button>
                     }
                     else
                     {

@@ -1,5 +1,6 @@
 ﻿@using U_OnlineBazer.Models
-@model List<Product>
+@using X.PagedList.Mvc.Core
+@model X.PagedList.IPagedList<Product>
 @{
     ViewData["Title"] = "Home Page";
 }
@@ -27,4 +28,7 @@
             </div>
         </div>
     }
+</div>
+<div>
+    @Html.PagedListPager(Model,c=>Href("~/Customer/Home/Index?Page="+c))
 </div>

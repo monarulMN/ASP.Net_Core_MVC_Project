@@ -4,6 +4,7 @@ using System.Diagnostics;
 using U_OnlineBazer.Data;
 using U_OnlineBazer.Models;
 using U_OnlineBazer.Utility;
+using X.PagedList.Extensions;
 
 namespace U_OnlineBazer.Areas.Customer.Controllers
 {
@@ -17,10 +18,10 @@ namespace U_OnlineBazer.Areas.Customer.Controllers
             _dbContext = dbContext;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(int? page)
         {
             //return View();
-            return View(_dbContext.Products.Include(c => c.ProductTypes).Include(c => c.SpecialTags).ToList().ToList());
+            return View(_dbContext.Products.Include(c => c.ProductTypes).Include(c => c.SpecialTags).ToList().ToPagedList(page ?? 1, 8));
         }
 
         public IActionResult Privacy()
@@ -51,7 +52,7 @@ namespace U_OnlineBazer.Areas.Customer.Controllers
         }
 
 
-        //GET Product Details Action Method
+        //POST Product Details Action Method
 
         [HttpPost]
         [ActionName("Detail")]
@@ -78,10 +79,25 @@ namespace U_OnlineBazer.Areas.Customer.Controllers
         }
 
         //GET Remove action Method
+        [ActionName("Remove")]
+        public IActionResult RemoveToCart(int? id)
+        {
+            List<Product> products = HttpContext.Session.Get<List<Product>>("products");
+            if (products != null)
+            {
+                var product = products.FirstOrDefault(c => c.Id == id);
+                if (product != null)
+                {
+                    products.Remove(product);
+                    HttpContext.Session.Set("products", products);
+                }
+            }
+            return RedirectToAction(nameof(Index));
+        }
+
 
         [HttpPost]
-        [ActionName("Remove")]
-        public IActionResult RemoveToCCart(int? id)
+        public IActionResult Remove(int? id)
         {
             List<Product> products = HttpContext.Session.Get<List<Product>>("products");
             if(products != null)
@@ -94,6 +110,19 @@ namespace U_OnlineBazer.Areas.Customer.Controllers
                 }
             }
             return RedirectToAction(nameof(Index));
+        }
+
+
+        //GET Product Cart Action Method
+
+        public IActionResult Cart()
+        {
+            List<Product> products = HttpContext.Session.Get<List<Product>>("products");
+            if(products == null)
+            {
+                products = new List<Product>();
+            }
+            return View(products);
         }
 
 

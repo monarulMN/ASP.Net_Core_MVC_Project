@@ -570,3 +570,5 @@ G:\U_OnlineBazer\U_OnlineBazer\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.Razor.E
 G:\U_OnlineBazer\U_OnlineBazer\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.dll
 G:\U_OnlineBazer\U_OnlineBazer\bin\Debug\net8.0\libman.json
 G:\U_OnlineBazer\U_OnlineBazer\obj\Debug\net8.0\U_OnlineBazer.sourcelink.json
+G:\U_OnlineBazer\U_OnlineBazer\bin\Debug\net8.0\X.PagedList.dll
+G:\U_OnlineBazer\U_OnlineBazer\bin\Debug\net8.0\X.PagedList.Mvc.Core.dll
