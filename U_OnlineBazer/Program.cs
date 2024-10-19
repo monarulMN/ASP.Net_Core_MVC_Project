@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using U_OnlineBazer.Data;
 
@@ -15,6 +16,7 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.Requ
 builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
 
 builder.Services.AddDistributedMemoryCache();
+//builder.Services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
 builder.Services.AddSession(options =>
 {
@@ -43,6 +45,7 @@ app.UseStaticFiles();
 app.UseRouting();
 app.UseSession();
 app.UseAuthorization();
+app.UseAuthentication();
 
 
 app.MapControllerRoute(
