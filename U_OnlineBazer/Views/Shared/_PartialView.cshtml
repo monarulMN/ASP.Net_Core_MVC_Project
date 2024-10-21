@@ -2,11 +2,28 @@
 @*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
-
-<td style="width:150px">
+<td style=" width: 150px">
     <div class="btn-group">
-        <a asp-action="Edit" asp-controller="ProductTypes" class="btn btn-primary" asp-route-id="@Model">Edit</a>
-        <a asp-action="Details" asp-controller="ProductTypes" class="btn btn-success" asp-route-id="@Model">Details</a>
-        <a asp-action="Delete" asp-controller="ProductTypes" class="btn btn-danger" asp-route-id="@Model">Delete</a>
+
+        <form asp-action="Edit" method="">
+            <input type="hidden" id="id" name="id" value="@Model" />
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary"> <i class="bi bi-pencil-square"></i></button>
+            </div>
+        </form>
+        <form asp-action="Details" method="">
+            <input type="hidden" id="id" name="id" value="@Model" />
+            <div class="form-group">
+                <button type="submit" class="btn btn-success"> <i class="bi bi-ticket-detailed"></i></button>
+            </div>
+        </form>
+        <form asp-action="Locout" method="">
+            <input type="hidden" id="id" name="id" value="@Model" />
+            <div class="form-group">
+                <button type="submit" class="btn btn-danger"> <i class="bi bi-trash"></i></button>
+            </div>
+        </form>
+
     </div>
+
 </td>

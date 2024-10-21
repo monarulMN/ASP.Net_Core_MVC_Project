@@ -1,0 +1,90 @@
+﻿@using U_OnlineBazer.Models;
+@model IEnumerable<ApplicationUser>
+@{
+    ViewData["Title"] = "Index";
+}
+<div class="d-sm-flex justify-content-between">
+    <h2 class="text-info">User List</h2>
+    <a asp-action="Create" class="btn btn-info"> &nbsp;<i class="bi bi-plus-lg"></i> New User</a>
+</div>
+<hr />
+
+<div>
+    <table class="table table-striped border">
+        <tr class="table-info">
+            <th>
+                Name
+            </th>
+            <th>
+                UserName
+            </th>
+            <th>
+                Status
+            </th>
+            <th></th>
+            <th></th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.FirstName @item.LastName</td>
+                <td>@item.UserName</td>
+                @if(item.LockoutEnd>DateTime.Now && item.LockoutEnd != null)
+                {
+                    <td>Inactive</td>
+                    <td></td>
+                    <td>
+                        <div class="btn-group ">
+
+                            <form asp-action="Active" method="">
+                                <input type="hidden" id="id" name="id" value="@item.Id" />
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-primary"> <i class="bi bi-pencil-square"></i></button>
+                                </div>
+                            </form>
+                            
+                            <form asp-action="Delete" method="post">
+                                <input type="hidden" id="id" name="id" value="@item.Id" />
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-danger"> <i class="bi bi-trash"></i></button>
+                                </div>
+                            </form>
+
+                        </div>
+                    </td>
+
+                }
+                else
+                {
+                    <td>Active</td>
+                    <td>
+                        <partial name="_PartialView" model="@item.Id" />
+                    </td>
+                }
+                
+            </tr>
+        }
+    </table>
+</div>
+
+@section scripts {
+    <script src="~/lib/alertifyjs/alertify.js"></script>
+    <script src="~/lib/alertifyjs/alertify.min.js"></script>
+    @* <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.14.0/build/alertify.min.js"> *@
+    <script type="text/javascript">
+        $(function () {
+            var save = '@TempData["save"]'
+            if (save != '') {
+                alertify.success(save);
+            }
+            var edit = '@TempData["edit"]'
+            if (edit != '') {
+                alertify.success(edit);
+            }
+            var del = '@TempData["delete"]'
+            if (del != '') {
+                alertify.error(del);
+            }
+        })
+    </script>
+}

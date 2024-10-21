@@ -24,7 +24,11 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/U_OnlineBazer.styles.css" asp-append-version="true" />
-    
+    <style>
+        .error{
+            color:red;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -72,8 +76,12 @@
             &copy; 2024 - U_OnlineBazer - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    @* <script src="~/lib/jquery/dist/jquery.min.js"></script> *@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     <script src="~/lib/alertifyjs/alertify.js"></script>
     <script src="~/lib/alertifyjs/alertify.min.js"></script>
