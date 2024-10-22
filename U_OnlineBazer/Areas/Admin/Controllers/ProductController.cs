@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using U_OnlineBazer.Data;
@@ -7,6 +8,7 @@ using U_OnlineBazer.Models;
 namespace U_OnlineBazer.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize]
     public class ProductController : Controller
     {
         private readonly ApplicationDbContext _dbContext;
@@ -17,6 +19,8 @@ namespace U_OnlineBazer.Areas.Admin.Controllers
             _dbContext = dbContext;
             _webHostEnvironment = webHostEnvironment;
         }
+
+        [AllowAnonymous]
         public IActionResult Index()
         {
             List<Product> products = _dbContext.Products.Include(c => c.ProductTypes).Include(f => f.SpecialTags).ToList();
@@ -39,6 +43,7 @@ namespace U_OnlineBazer.Areas.Admin.Controllers
 
 
         //GET Create Action Method
+       
         public ActionResult Create()
         {
             ViewData["ProductId"] = new SelectList(_dbContext.ProductTypes.ToList(), "Id", "ProductTypes");
@@ -84,6 +89,7 @@ namespace U_OnlineBazer.Areas.Admin.Controllers
 
         //GET Edit Action Method
 
+       
         public ActionResult Edit(int? id)
         {
             ViewData["ProductId"] = new SelectList(_dbContext.ProductTypes.ToList(), "Id", "ProductTypes");
@@ -157,7 +163,7 @@ namespace U_OnlineBazer.Areas.Admin.Controllers
 
 
         //POST Delete Action Method
-
+        
         [HttpPost]
         public async Task<IActionResult> Delete(int? id)
         {

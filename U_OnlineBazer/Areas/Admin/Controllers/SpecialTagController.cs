@@ -1,10 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using U_OnlineBazer.Data;
 using U_OnlineBazer.Models;
 
 namespace U_OnlineBazer.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize]
     public class SpecialTagController : Controller
     {
         private readonly ApplicationDbContext _dbContext;
@@ -22,6 +24,7 @@ namespace U_OnlineBazer.Areas.Admin.Controllers
         }
 
         //GET Create Action Method
+        
         public ActionResult Create()
         {
             return View();
@@ -46,6 +49,7 @@ namespace U_OnlineBazer.Areas.Admin.Controllers
 
 
         //GET Edit Action Method
+        
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -104,7 +108,7 @@ namespace U_OnlineBazer.Areas.Admin.Controllers
 
 
         //POST Delete Action Method
-
+       
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Delete(int? id)

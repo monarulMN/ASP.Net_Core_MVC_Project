@@ -1,6 +1,6 @@
 ﻿@model U_OnlineBazer.Models.Product
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Detail";
 }
 @using U_OnlineBazer.Utility
 @using Microsoft.AspNetCore.Http
@@ -19,7 +19,7 @@
 <br />
 
 <h2 class="text-info">Product Details</h2>
-<form asp-action="" method="post" enctype="multipart/form-data">
+<form asp-action="Detail" method="post" enctype="multipart/form-data">
     <div class="p-4 rounded border row">
         <div asp-validation-summary="ModelOnly" class="text-danger">
         </div>

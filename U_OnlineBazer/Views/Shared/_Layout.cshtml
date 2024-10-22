@@ -1,8 +1,9 @@
-﻿@* @using System.Net.Http *@
+﻿@using System.Net.Http
 @using U_OnlineBazer.Utility
 @using Microsoft.AspNetCore.Http
 @inject IHttpContextAccessor HttpContextAccessor
 @{
+    var userRole = HttpContextAccessor.HttpContext.Session.GetString("roleName");
     int count = 0;
     List<Product> products = HttpContextAccessor.HttpContext.Session.Get<List<Product>>("products");
     if(products == null)
@@ -41,18 +42,19 @@
                 </button>
                 <div class="navbar-collapse collapse text-center text-white d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1 ">
-                        <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>  
-                        <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="Admin" asp-controller="ProductTypes" asp-action="Index" >ProductType</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="Admin" asp-controller="SpecialTag" asp-action="Index">Tag Name</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="Admin" asp-controller="Product" asp-action="Index">Product</a>
-                        </li>
+                        @if(userRole=="Super User")
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-white" asp-area="Admin" asp-controller="ProductTypes" asp-action="Index">ProductType</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" asp-area="Admin" asp-controller="SpecialTag" asp-action="Index">Tag Name</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" asp-area="Admin" asp-controller="Product" asp-action="Index">Product</a>
+                            </li>
+                        }  
+                        
                         <li class="nav-item">
                             <a class="nav-link text-white" asp-area="Customer" asp-controller="Home" asp-action="Cart">
                                 <i class="bi bi-cart"></i>

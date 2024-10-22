@@ -1,0 +1,77 @@
+﻿@{
+    ViewData["Title"] = "AssignUsserRole";
+}
+
+<div class="row">
+    <div class="col-6">
+        <h2 class="text-info">Assign User Role</h2>
+    </div>
+    
+    
+</div>
+<hr />
+
+<div>
+    <table class="table table-striped border">
+        <tr class="table-info">
+            <th>
+                User Name
+            </th>
+            <th>
+                Role Name
+            </th>
+            <th></th>
+
+        </tr>
+        @foreach (var item in ViewBag.UserRoles)
+        {
+            <tr>
+                <td>@item.UserName</td>
+                <td>@item.RoleName</td>
+
+                @* <td class="text-end">
+                    <div class="btn-group">
+
+                        <form asp-action="Edit" method="">
+                            <input type="hidden" id="id" name="id" value="@item.Id" />
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary"> <i class="bi bi-pencil-square"></i></button>
+                            </div>
+                        </form>
+
+                        <form asp-action="Delete" method="post">
+                            <input type="hidden" id="id" name="id" value="@item.Id" />
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-danger"> <i class="bi bi-trash"></i></button>
+                            </div>
+                        </form>
+
+                    </div>
+                </td> *@
+
+            </tr>
+        }
+    </table>
+</div>
+
+@section scripts {
+    <script src="~/lib/alertifyjs/alertify.js"></script>
+    <script src="~/lib/alertifyjs/alertify.min.js"></script>
+    @* <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.14.0/build/alertify.min.js"> *@
+    <script type="text/javascript">
+        $(function () {
+            var save = '@TempData["save"]'
+            if (save != '') {
+                alertify.success(save);
+            }
+            var edit = '@TempData["edit"]'
+            if (edit != '') {
+                alertify.success(edit);
+            }
+            var del = '@TempData["delete"]'
+            if (del != '') {
+                alertify.error(del);
+            }
+        })
+    </script>
+}

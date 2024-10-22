@@ -3,28 +3,36 @@
   "WorkspaceRootPath": "G:\\U_OnlineBazer\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{89E7577D-9556-4935-99B7-13B49D0FB5B8}|U_OnlineBazer\\U_OnlineBazer.csproj|g:\\u_onlinebazer\\u_onlinebazer\\areas\\admin\\controllers\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{89E7577D-9556-4935-99B7-13B49D0FB5B8}|U_OnlineBazer\\U_OnlineBazer.csproj|solutionrelative:u_onlinebazer\\areas\\admin\\controllers\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{89E7577D-9556-4935-99B7-13B49D0FB5B8}|U_OnlineBazer\\U_OnlineBazer.csproj|g:\\u_onlinebazer\\u_onlinebazer\\areas\\admin\\views\\role\\assign.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{89E7577D-9556-4935-99B7-13B49D0FB5B8}|U_OnlineBazer\\U_OnlineBazer.csproj|solutionrelative:u_onlinebazer\\areas\\admin\\views\\role\\assign.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{89E7577D-9556-4935-99B7-13B49D0FB5B8}|U_OnlineBazer\\U_OnlineBazer.csproj|g:\\u_onlinebazer\\u_onlinebazer\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{89E7577D-9556-4935-99B7-13B49D0FB5B8}|U_OnlineBazer\\U_OnlineBazer.csproj|solutionrelative:u_onlinebazer\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{89E7577D-9556-4935-99B7-13B49D0FB5B8}|U_OnlineBazer\\U_OnlineBazer.csproj|g:\\u_onlinebazer\\u_onlinebazer\\areas\\customer\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{89E7577D-9556-4935-99B7-13B49D0FB5B8}|U_OnlineBazer\\U_OnlineBazer.csproj|solutionrelative:u_onlinebazer\\areas\\customer\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{89E7577D-9556-4935-99B7-13B49D0FB5B8}|U_OnlineBazer\\U_OnlineBazer.csproj|g:\\u_onlinebazer\\u_onlinebazer\\areas\\admin\\models\\roleuservm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{89E7577D-9556-4935-99B7-13B49D0FB5B8}|U_OnlineBazer\\U_OnlineBazer.csproj|solutionrelative:u_onlinebazer\\areas\\admin\\models\\roleuservm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{89E7577D-9556-4935-99B7-13B49D0FB5B8}|U_OnlineBazer\\U_OnlineBazer.csproj|g:\\u_onlinebazer\\u_onlinebazer\\areas\\identity\\pages\\account\\logout.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{89E7577D-9556-4935-99B7-13B49D0FB5B8}|U_OnlineBazer\\U_OnlineBazer.csproj|solutionrelative:u_onlinebazer\\areas\\identity\\pages\\account\\logout.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89E7577D-9556-4935-99B7-13B49D0FB5B8}|U_OnlineBazer\\U_OnlineBazer.csproj|g:\\u_onlinebazer\\u_onlinebazer\\areas\\identity\\pages\\account\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{89E7577D-9556-4935-99B7-13B49D0FB5B8}|U_OnlineBazer\\U_OnlineBazer.csproj|solutionrelative:u_onlinebazer\\areas\\identity\\pages\\account\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89E7577D-9556-4935-99B7-13B49D0FB5B8}|U_OnlineBazer\\U_OnlineBazer.csproj|g:\\u_onlinebazer\\u_onlinebazer\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{89E7577D-9556-4935-99B7-13B49D0FB5B8}|U_OnlineBazer\\U_OnlineBazer.csproj|solutionrelative:u_onlinebazer\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{89E7577D-9556-4935-99B7-13B49D0FB5B8}|U_OnlineBazer\\U_OnlineBazer.csproj|g:\\u_onlinebazer\\u_onlinebazer\\areas\\customer\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{89E7577D-9556-4935-99B7-13B49D0FB5B8}|U_OnlineBazer\\U_OnlineBazer.csproj|solutionrelative:u_onlinebazer\\areas\\customer\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89E7577D-9556-4935-99B7-13B49D0FB5B8}|U_OnlineBazer\\U_OnlineBazer.csproj|g:\\u_onlinebazer\\u_onlinebazer\\areas\\admin\\controllers\\producttypescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{89E7577D-9556-4935-99B7-13B49D0FB5B8}|U_OnlineBazer\\U_OnlineBazer.csproj|solutionrelative:u_onlinebazer\\areas\\admin\\controllers\\producttypescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89E7577D-9556-4935-99B7-13B49D0FB5B8}|U_OnlineBazer\\U_OnlineBazer.csproj|g:\\u_onlinebazer\\u_onlinebazer\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{89E7577D-9556-4935-99B7-13B49D0FB5B8}|U_OnlineBazer\\U_OnlineBazer.csproj|solutionrelative:u_onlinebazer\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89E7577D-9556-4935-99B7-13B49D0FB5B8}|U_OnlineBazer\\U_OnlineBazer.csproj|g:\\u_onlinebazer\\u_onlinebazer\\areas\\admin\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{89E7577D-9556-4935-99B7-13B49D0FB5B8}|U_OnlineBazer\\U_OnlineBazer.csproj|solutionrelative:u_onlinebazer\\areas\\admin\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -43,80 +51,101 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Assign.cshtml",
-              "DocumentMoniker": "G:\\U_OnlineBazer\\U_OnlineBazer\\Areas\\Admin\\Views\\Role\\Assign.cshtml",
-              "RelativeDocumentMoniker": "U_OnlineBazer\\Areas\\Admin\\Views\\Role\\Assign.cshtml",
-              "ToolTip": "G:\\U_OnlineBazer\\U_OnlineBazer\\Areas\\Admin\\Views\\Role\\Assign.cshtml",
-              "RelativeToolTip": "U_OnlineBazer\\Areas\\Admin\\Views\\Role\\Assign.cshtml",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAACIAAABGAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-21T06:43:33.044Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "RoleUserVm.cs",
-              "DocumentMoniker": "G:\\U_OnlineBazer\\U_OnlineBazer\\Areas\\Admin\\Models\\RoleUserVm.cs",
-              "RelativeDocumentMoniker": "U_OnlineBazer\\Areas\\Admin\\Models\\RoleUserVm.cs",
-              "ToolTip": "G:\\U_OnlineBazer\\U_OnlineBazer\\Areas\\Admin\\Models\\RoleUserVm.cs",
-              "RelativeToolTip": "U_OnlineBazer\\Areas\\Admin\\Models\\RoleUserVm.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAFAAAA",
+              "Title": "Logout.cshtml.cs",
+              "DocumentMoniker": "G:\\U_OnlineBazer\\U_OnlineBazer\\Areas\\Identity\\Pages\\Account\\Logout.cshtml.cs",
+              "RelativeDocumentMoniker": "U_OnlineBazer\\Areas\\Identity\\Pages\\Account\\Logout.cshtml.cs",
+              "ToolTip": "G:\\U_OnlineBazer\\U_OnlineBazer\\Areas\\Identity\\Pages\\Account\\Logout.cshtml.cs",
+              "RelativeToolTip": "U_OnlineBazer\\Areas\\Identity\\Pages\\Account\\Logout.cshtml.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAAABwAAAAzAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T06:36:30.725Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "RoleController.cs",
-              "DocumentMoniker": "G:\\U_OnlineBazer\\U_OnlineBazer\\Areas\\Admin\\Controllers\\RoleController.cs",
-              "RelativeDocumentMoniker": "U_OnlineBazer\\Areas\\Admin\\Controllers\\RoleController.cs",
-              "ToolTip": "G:\\U_OnlineBazer\\U_OnlineBazer\\Areas\\Admin\\Controllers\\RoleController.cs",
-              "RelativeToolTip": "U_OnlineBazer\\Areas\\Admin\\Controllers\\RoleController.cs",
-              "ViewState": "AQIAAIAAAAAAAAAAAAAAAIkAAAALAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-20T19:59:07.656Z",
+              "WhenOpened": "2024-10-22T07:16:53.366Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "G:\\U_OnlineBazer\\U_OnlineBazer\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "U_OnlineBazer\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "G:\\U_OnlineBazer\\U_OnlineBazer\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "U_OnlineBazer\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAD0AAAAAAAAAAAAAADcAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-22T06:52:26.9Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "UserController.cs",
               "DocumentMoniker": "G:\\U_OnlineBazer\\U_OnlineBazer\\Areas\\Customer\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "U_OnlineBazer\\Areas\\Customer\\Controllers\\UserController.cs",
               "ToolTip": "G:\\U_OnlineBazer\\U_OnlineBazer\\Areas\\Customer\\Controllers\\UserController.cs",
               "RelativeToolTip": "U_OnlineBazer\\Areas\\Customer\\Controllers\\UserController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAKwAAAASAAAA",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAAACoAAABZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-19T20:06:33.336Z",
+              "WhenOpened": "2024-10-22T06:44:02.553Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ApplicationUser.cs",
-              "DocumentMoniker": "G:\\U_OnlineBazer\\U_OnlineBazer\\Models\\ApplicationUser.cs",
-              "RelativeDocumentMoniker": "U_OnlineBazer\\Models\\ApplicationUser.cs",
-              "ToolTip": "G:\\U_OnlineBazer\\U_OnlineBazer\\Models\\ApplicationUser.cs",
-              "RelativeToolTip": "U_OnlineBazer\\Models\\ApplicationUser.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAsAAAA",
+              "Title": "Login.cshtml.cs",
+              "DocumentMoniker": "G:\\U_OnlineBazer\\U_OnlineBazer\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
+              "RelativeDocumentMoniker": "U_OnlineBazer\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
+              "ToolTip": "G:\\U_OnlineBazer\\U_OnlineBazer\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
+              "RelativeToolTip": "U_OnlineBazer\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
+              "ViewState": "AQIAAHoAAAAAAAAAAAAAAIMAAAA/AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-19T17:43:33.062Z",
+              "WhenOpened": "2024-10-22T05:03:51.161Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "G:\\U_OnlineBazer\\U_OnlineBazer\\Areas\\Admin\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "U_OnlineBazer\\Areas\\Admin\\Controllers\\ProductController.cs",
+              "ToolTip": "G:\\U_OnlineBazer\\U_OnlineBazer\\Areas\\Admin\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "U_OnlineBazer\\Areas\\Admin\\Controllers\\ProductController.cs",
+              "ViewState": "AQIAADEAAAAAAAAAAAAAAAkAAAALAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T15:33:57.322Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "G:\\U_OnlineBazer\\U_OnlineBazer\\Program.cs",
+              "RelativeDocumentMoniker": "U_OnlineBazer\\Program.cs",
+              "ToolTip": "G:\\U_OnlineBazer\\U_OnlineBazer\\Program.cs",
+              "RelativeToolTip": "U_OnlineBazer\\Program.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAA4AAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T14:55:02.533Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "ProductTypesController.cs",
+              "DocumentMoniker": "G:\\U_OnlineBazer\\U_OnlineBazer\\Areas\\Admin\\Controllers\\ProductTypesController.cs",
+              "RelativeDocumentMoniker": "U_OnlineBazer\\Areas\\Admin\\Controllers\\ProductTypesController.cs",
+              "ToolTip": "G:\\U_OnlineBazer\\U_OnlineBazer\\Areas\\Admin\\Controllers\\ProductTypesController.cs",
+              "RelativeToolTip": "U_OnlineBazer\\Areas\\Admin\\Controllers\\ProductTypesController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T14:47:59.317Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "HomeController.cs",
               "DocumentMoniker": "G:\\U_OnlineBazer\\U_OnlineBazer\\Areas\\Customer\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "U_OnlineBazer\\Areas\\Customer\\Controllers\\HomeController.cs",
               "ToolTip": "G:\\U_OnlineBazer\\U_OnlineBazer\\Areas\\Customer\\Controllers\\HomeController.cs",
               "RelativeToolTip": "U_OnlineBazer\\Areas\\Customer\\Controllers\\HomeController.cs",
-              "ViewState": "AQIAAAIAAAAAAAAAAAAAABcAAACGAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACkAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T14:36:07.996Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-18T14:36:07.996Z"
             }
           ]
         }

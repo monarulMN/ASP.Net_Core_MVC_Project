@@ -114,7 +114,7 @@ namespace U_OnlineBazer.Areas.Admin.Controllers
             var result = await _roleManager.DeleteAsync(role);
             if (result.Succeeded)
             {
-                TempData["delete"] = "Role has been updated successfully";
+                TempData["delete"] = "Role has been deleted successfully";
                 return RedirectToAction(nameof(Index));
             }
             return View();
@@ -124,18 +124,26 @@ namespace U_OnlineBazer.Areas.Admin.Controllers
 
         public async Task<IActionResult> Assign()
         {
-            ViewData["UserId"] = new SelectList(_dbContext.ApplicationUsers.ToList(), "Id", "UserName");
+            ViewData["UserId"] = new SelectList(_dbContext.ApplicationUsers.Where(c=>c.LockoutEnd<DateTime.Now || c.LockoutEnd ==null).ToList(), "Id", "UserName");
             ViewData["RoleId"] = new SelectList(_roleManager.Roles.ToList(), "Name", "Name");
             return View();
         }
 
 
         //POST assign action method
+
         [HttpPost]
         public async Task<IActionResult> Assign(RoleUserVm roleUser)
         {
             var user = _dbContext.ApplicationUsers.FirstOrDefault(c=>c.Id==roleUser.UserId);
-           
+            var isCheckRoleAssign =await _userManager.IsInRoleAsync(user, roleUser.RoleId);
+            if(isCheckRoleAssign)
+            {
+                ViewBag.message = "This user already assign this role";
+                ViewData["UserId"] = new SelectList(_dbContext.ApplicationUsers.Where(c => c.LockoutEnd < DateTime.Now || c.LockoutEnd == null).ToList(), "Id", "UserName");
+                ViewData["RoleId"] = new SelectList(_roleManager.Roles.ToList(), "Name", "Name");
+                return View();
+            }
             var role = await _userManager.AddToRoleAsync(user, roleUser.RoleId);
             if (role.Succeeded)
             {
@@ -143,6 +151,25 @@ namespace U_OnlineBazer.Areas.Admin.Controllers
                 return RedirectToAction(nameof(Index));
             }
             
+            return View();
+        }
+
+
+        public ActionResult AssignUserRole()
+        {
+            var result = from ur in _dbContext.UserRoles
+                         join r in _dbContext.Roles on ur.RoleId equals r.Id
+                         join a in _dbContext.ApplicationUsers on ur.UserId equals a.Id
+                         select new UserRoleMapping()
+                         {
+                             UserId = ur.UserId,
+                             RoleId = ur.RoleId,
+                             UserName = a.UserName,
+                             RoleName = r.Name
+
+                         };
+            ViewBag.UserRoles = result;
+
             return View();
         }
 
