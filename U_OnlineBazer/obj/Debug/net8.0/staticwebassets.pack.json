@@ -1,76 +1,68 @@
 {
   "Files": [
     {
-      "Id": "G:\\U_OnlineBazer\\U_OnlineBazer\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\U_OnlineBazer.bundle.scp.css",
-      "PackagePath": "staticwebassets\\U_OnlineBazer.bundle.scp.css"
+      "Id": "G:\\U_OnlineBazer\\U_OnlineBazer\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\U_OnlineBazar.bundle.scp.css",
+      "PackagePath": "staticwebassets\\U_OnlineBazar.bundle.scp.css"
     },
     {
-      "Id": "G:\\U_OnlineBazer\\U_OnlineBazer\\wwwroot\\Images\\10.jpg",
-      "PackagePath": "staticwebassets\\Images\\10.jpg"
+      "Id": "G:\\U_OnlineBazer\\U_OnlineBazer\\wwwroot\\Images\\angur.jpg",
+      "PackagePath": "staticwebassets\\Images\\angur.jpg"
     },
     {
-      "Id": "G:\\U_OnlineBazer\\U_OnlineBazer\\wwwroot\\Images\\6.jpg",
-      "PackagePath": "staticwebassets\\Images\\6.jpg"
+      "Id": "G:\\U_OnlineBazer\\U_OnlineBazer\\wwwroot\\Images\\bringal.jpg",
+      "PackagePath": "staticwebassets\\Images\\bringal.jpg"
     },
     {
-      "Id": "G:\\U_OnlineBazer\\U_OnlineBazer\\wwwroot\\Images\\7.jpg",
-      "PackagePath": "staticwebassets\\Images\\7.jpg"
+      "Id": "G:\\U_OnlineBazer\\U_OnlineBazer\\wwwroot\\Images\\brocoli.jpg",
+      "PackagePath": "staticwebassets\\Images\\brocoli.jpg"
     },
     {
-      "Id": "G:\\U_OnlineBazer\\U_OnlineBazer\\wwwroot\\Images\\718mehhjxfl._ac_sl1500__1_1_1.jpg",
-      "PackagePath": "staticwebassets\\Images\\718mehhjxfl._ac_sl1500__1_1_1.jpg"
+      "Id": "G:\\U_OnlineBazer\\U_OnlineBazer\\wwwroot\\Images\\carrot.jpg",
+      "PackagePath": "staticwebassets\\Images\\carrot.jpg"
     },
     {
-      "Id": "G:\\U_OnlineBazer\\U_OnlineBazer\\wwwroot\\Images\\8.jpg",
-      "PackagePath": "staticwebassets\\Images\\8.jpg"
+      "Id": "G:\\U_OnlineBazer\\U_OnlineBazer\\wwwroot\\Images\\gom.jpg",
+      "PackagePath": "staticwebassets\\Images\\gom.jpg"
     },
     {
-      "Id": "G:\\U_OnlineBazer\\U_OnlineBazer\\wwwroot\\Images\\TB1f4LzNFXXXXalapXXXXXXXXXX_!!0-item_pic.jpg",
-      "PackagePath": "staticwebassets\\Images\\TB1f4LzNFXXXXalapXXXXXXXXXX_!!0-item_pic.jpg"
+      "Id": "G:\\U_OnlineBazer\\U_OnlineBazer\\wwwroot\\Images\\green vutta.jpg",
+      "PackagePath": "staticwebassets\\Images\\green vutta.jpg"
     },
     {
-      "Id": "G:\\U_OnlineBazer\\U_OnlineBazer\\wwwroot\\Images\\applle.jpeg",
-      "PackagePath": "staticwebassets\\Images\\applle.jpeg"
-    },
-    {
-      "Id": "G:\\U_OnlineBazer\\U_OnlineBazer\\wwwroot\\Images\\dell1.jpg",
-      "PackagePath": "staticwebassets\\Images\\dell1.jpg"
-    },
-    {
-      "Id": "G:\\U_OnlineBazer\\U_OnlineBazer\\wwwroot\\Images\\dell2.jpg",
-      "PackagePath": "staticwebassets\\Images\\dell2.jpg"
-    },
-    {
-      "Id": "G:\\U_OnlineBazer\\U_OnlineBazer\\wwwroot\\Images\\dell3.jpg",
-      "PackagePath": "staticwebassets\\Images\\dell3.jpg"
-    },
-    {
-      "Id": "G:\\U_OnlineBazer\\U_OnlineBazer\\wwwroot\\Images\\giant_14465.jpg",
-      "PackagePath": "staticwebassets\\Images\\giant_14465.jpg"
-    },
-    {
-      "Id": "G:\\U_OnlineBazer\\U_OnlineBazer\\wwwroot\\Images\\hp1.jpg",
-      "PackagePath": "staticwebassets\\Images\\hp1.jpg"
-    },
-    {
-      "Id": "G:\\U_OnlineBazer\\U_OnlineBazer\\wwwroot\\Images\\hp2.jpeg",
-      "PackagePath": "staticwebassets\\Images\\hp2.jpeg"
-    },
-    {
-      "Id": "G:\\U_OnlineBazer\\U_OnlineBazer\\wwwroot\\Images\\instock-logo.png",
-      "PackagePath": "staticwebassets\\Images\\instock-logo.png"
-    },
-    {
-      "Id": "G:\\U_OnlineBazer\\U_OnlineBazer\\wwwroot\\Images\\noimage.PNG",
-      "PackagePath": "staticwebassets\\Images\\noimage.PNG"
+      "Id": "G:\\U_OnlineBazer\\U_OnlineBazer\\wwwroot\\Images\\masrum.jpg",
+      "PackagePath": "staticwebassets\\Images\\masrum.jpg"
     },
     {
       "Id": "G:\\U_OnlineBazer\\U_OnlineBazer\\wwwroot\\Images\\notinstock.jpg",
       "PackagePath": "staticwebassets\\Images\\notinstock.jpg"
     },
     {
-      "Id": "G:\\U_OnlineBazer\\U_OnlineBazer\\wwwroot\\Images\\s1.jpg",
-      "PackagePath": "staticwebassets\\Images\\s1.jpg"
+      "Id": "G:\\U_OnlineBazer\\U_OnlineBazer\\wwwroot\\Images\\onion.jpg",
+      "PackagePath": "staticwebassets\\Images\\onion.jpg"
+    },
+    {
+      "Id": "G:\\U_OnlineBazer\\U_OnlineBazer\\wwwroot\\Images\\seed.jpg",
+      "PackagePath": "staticwebassets\\Images\\seed.jpg"
+    },
+    {
+      "Id": "G:\\U_OnlineBazer\\U_OnlineBazer\\wwwroot\\Images\\shorisha.jpg",
+      "PackagePath": "staticwebassets\\Images\\shorisha.jpg"
+    },
+    {
+      "Id": "G:\\U_OnlineBazer\\U_OnlineBazer\\wwwroot\\Images\\strobre.jpg",
+      "PackagePath": "staticwebassets\\Images\\strobre.jpg"
+    },
+    {
+      "Id": "G:\\U_OnlineBazer\\U_OnlineBazer\\wwwroot\\Images\\sunflower.jpg",
+      "PackagePath": "staticwebassets\\Images\\sunflower.jpg"
+    },
+    {
+      "Id": "G:\\U_OnlineBazer\\U_OnlineBazer\\wwwroot\\Images\\vagetable.jpg",
+      "PackagePath": "staticwebassets\\Images\\vagetable.jpg"
+    },
+    {
+      "Id": "G:\\U_OnlineBazer\\U_OnlineBazer\\wwwroot\\Images\\vutta.jpg",
+      "PackagePath": "staticwebassets\\Images\\vutta.jpg"
     },
     {
       "Id": "G:\\U_OnlineBazer\\U_OnlineBazer\\wwwroot\\css\\site.css",
@@ -409,20 +401,20 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.U_OnlineBazer.Microsoft.AspNetCore.StaticWebAssets.props",
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.U_OnlineBazar.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },
     {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.U_OnlineBazer.props",
-      "PackagePath": "build\\U_OnlineBazer.props"
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.U_OnlineBazar.props",
+      "PackagePath": "build\\U_OnlineBazar.props"
     },
     {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.U_OnlineBazer.props",
-      "PackagePath": "buildMultiTargeting\\U_OnlineBazer.props"
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.U_OnlineBazar.props",
+      "PackagePath": "buildMultiTargeting\\U_OnlineBazar.props"
     },
     {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.U_OnlineBazer.props",
-      "PackagePath": "buildTransitive\\U_OnlineBazer.props"
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.U_OnlineBazar.props",
+      "PackagePath": "buildTransitive\\U_OnlineBazar.props"
     }
   ],
   "ElementsToRemove": []

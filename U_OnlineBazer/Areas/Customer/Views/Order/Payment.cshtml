@@ -1,0 +1,27 @@
+﻿@model U_OnlineBazar.Models.PaymentViewModel
+@{
+    ViewData["Title"] = "ProcessPayment";
+}
+<br />
+<h2 class="text-info">Order Payment</h2>
+<form asp-action="ProcessPayment" method="post" enctype="multipart/form-data">
+    <div>
+        <label>Card Number</label>
+        <input asp-for="CardNumber" />
+    </div>
+    <div>
+        <label>Expiration Date</label>
+        <input asp-for="ExpirationDate" placeholder="MM/YY" />
+    </div>
+    <div>
+        <label>CVV</label>
+        <input asp-for="CVV" />
+    </div>
+    <button type="submit">Submit Payment</button>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

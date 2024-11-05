@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
+using System.Reflection.Emit;
+using U_OnlineBazar.Models;
 using U_OnlineBazer.Data;
 using U_OnlineBazer.Models;
 using U_OnlineBazer.Utility;
@@ -17,6 +19,7 @@ namespace U_OnlineBazer.Areas.Customer.Controllers
         {
             _dbContext = dbContext;
         }
+       
 
         public IActionResult Index(int? page)
         {

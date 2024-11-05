@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\U_OnlineBazar.props" />
+</Project>

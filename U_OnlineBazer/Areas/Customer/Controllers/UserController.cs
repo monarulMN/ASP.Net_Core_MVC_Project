@@ -25,7 +25,7 @@ namespace U_OnlineBazer.Areas.Customer.Controllers
 
 
         //GET Create action mehtod
-        public IActionResult Create()
+        public async Task<IActionResult> Create()
         {
             return View();
         }
@@ -35,12 +35,12 @@ namespace U_OnlineBazer.Areas.Customer.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(ApplicationUser user)
         {
-            if(ModelState.IsValid)
+            if (ModelState.IsValid)
             {
                 var result = await _userManager.CreateAsync(user, user.PasswordHash);
                 if (result.Succeeded)
                 {
-                    var isSaveRole = await _userManager.AddToRoleAsync(user,"Maktom Mithu");
+                    var isSaveRole = await _userManager.AddToRoleAsync(user, "Admin");
                     TempData["save"] = "User has been created successfully";
                     return RedirectToAction(nameof(Index));
                 }
@@ -49,12 +49,13 @@ namespace U_OnlineBazer.Areas.Customer.Controllers
                     ModelState.AddModelError(string.Empty, error.Description);
                 }
             }
-            
+
+
             return View();
         }
 
         //GET Edit action mehtod
-        public IActionResult Edit(string id)
+        public async Task<IActionResult> Edit(string id)
         {
             var user = _dbContext.ApplicationUsers.FirstOrDefault(c => c.Id == id);
             if (user == null)
@@ -88,7 +89,7 @@ namespace U_OnlineBazer.Areas.Customer.Controllers
 
         //GET Details action mehtod
 
-        public IActionResult Details(string id)
+        public async Task<IActionResult> Details(string id)
         {
             var user = _dbContext.ApplicationUsers.FirstOrDefault(c => c.Id == id);
             if (user == null)
@@ -100,7 +101,7 @@ namespace U_OnlineBazer.Areas.Customer.Controllers
 
         //GET Lockout action mehtod
 
-        public IActionResult Locout(string id)
+        public async Task<IActionResult> Locout(string id)
         {
             if (id == null)
             {
@@ -117,7 +118,7 @@ namespace U_OnlineBazer.Areas.Customer.Controllers
         //POST Lockout action mehtod
 
         [HttpPost]
-        public IActionResult Locout(ApplicationUser user)
+        public async Task<IActionResult> Locout(ApplicationUser user)
         {
             var userInfo = _dbContext.ApplicationUsers.FirstOrDefault(c => c.Id == user.Id);
             if (userInfo == null)
@@ -125,7 +126,7 @@ namespace U_OnlineBazer.Areas.Customer.Controllers
                 return NotFound();
 
             }
-            userInfo.LockoutEnd = DateTime.Now.AddYears(100);
+            userInfo.LockoutEnd = DateTime.Now.AddMinutes(2);
             int rowAffected = _dbContext.SaveChanges();
             if (rowAffected > 0)
             {
@@ -137,7 +138,7 @@ namespace U_OnlineBazer.Areas.Customer.Controllers
 
 
         //GET Active action mehtod
-        public IActionResult Active(string id)
+        public async Task<IActionResult> Active(string id)
         {
             var user = _dbContext.ApplicationUsers.FirstOrDefault(c => c.Id == id);
             if (user == null)
@@ -150,7 +151,7 @@ namespace U_OnlineBazer.Areas.Customer.Controllers
         //POST Active action mehtod
 
         [HttpPost]
-        public IActionResult Active(ApplicationUser user)
+        public async Task<IActionResult> Active(ApplicationUser user)
         {
             var userInfo = _dbContext.ApplicationUsers.FirstOrDefault(c => c.Id == user.Id);
             if (userInfo == null)
@@ -158,7 +159,8 @@ namespace U_OnlineBazer.Areas.Customer.Controllers
                 return NotFound();
 
             }
-            userInfo.LockoutEnd = DateTime.Now.AddDays(-1);
+            //userInfo.LockoutEnd = DateTime.Now.AddMinutes(-1);
+            userInfo.LockoutEnd = null;
             int rowAffected = _dbContext.SaveChanges();
             if (rowAffected > 0)
             {
@@ -172,7 +174,7 @@ namespace U_OnlineBazer.Areas.Customer.Controllers
         //POST delete action method
 
         [HttpPost]
-        public IActionResult Delete(ApplicationUser user)
+        public async Task<IActionResult> Delete(ApplicationUser user)
         {
             var userInfo = _dbContext.ApplicationUsers.FirstOrDefault(c => c.Id == user.Id);
             if (userInfo == null)

@@ -1,12 +1,12 @@
 ﻿// Licensed to the .NET Foundation under one or more agreements.
 // The .NET Foundation licenses this file to you under the MIT license.
-#nullable disable
-
+//nullable disable
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Identity;
@@ -23,67 +23,45 @@ namespace U_OnlineBazer.Areas.Identity.Pages.Account
     {
         private readonly SignInManager<IdentityUser> _signInManager;
         private readonly ILogger<LoginModel> _logger;
-        private readonly ApplicationDbContext _dbContext;
+        UserManager<IdentityUser> _userManager;
+        private ApplicationDbContext _dbContext;
 
-        public LoginModel(SignInManager<IdentityUser> signInManager, ILogger<LoginModel> logger,ApplicationDbContext dbContext)
+        public LoginModel(SignInManager<IdentityUser> signInManager, ILogger<LoginModel> logger, UserManager<IdentityUser> userManager, ApplicationDbContext dbContext)
         {
             _signInManager = signInManager;
             _logger = logger;
+            _userManager = userManager;
             _dbContext = dbContext;
         }
 
-        /// <summary>
-        ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
-        ///     directly from your code. This API may change or be removed in future releases.
-        /// </summary>
+
         [BindProperty]
         public InputModel Input { get; set; }
 
-        /// <summary>
-        ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
-        ///     directly from your code. This API may change or be removed in future releases.
-        /// </summary>
+
         public IList<AuthenticationScheme> ExternalLogins { get; set; }
 
-        /// <summary>
-        ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
-        ///     directly from your code. This API may change or be removed in future releases.
-        /// </summary>
+
         public string ReturnUrl { get; set; }
 
-        /// <summary>
-        ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
-        ///     directly from your code. This API may change or be removed in future releases.
-        /// </summary>
+
         [TempData]
         public string ErrorMessage { get; set; }
 
-        /// <summary>
-        ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
-        ///     directly from your code. This API may change or be removed in future releases.
-        /// </summary>
+
         public class InputModel
         {
-            /// <summary>
-            ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
-            ///     directly from your code. This API may change or be removed in future releases.
-            /// </summary>
+
             [Required]
             [EmailAddress]
             public string Email { get; set; }
 
-            /// <summary>
-            ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
-            ///     directly from your code. This API may change or be removed in future releases.
-            /// </summary>
+
             [Required]
             [DataType(DataType.Password)]
             public string Password { get; set; }
 
-            /// <summary>
-            ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
-            ///     directly from your code. This API may change or be removed in future releases.
-            /// </summary>
+
             [Display(Name = "Remember me?")]
             public bool RememberMe { get; set; }
         }
@@ -120,16 +98,16 @@ namespace U_OnlineBazer.Areas.Identity.Pages.Account
                 {
                     var userInfo = _dbContext.ApplicationUsers.FirstOrDefault(x => x.UserName.ToLower() == Input.Email.ToLower());
                     var roleInfo = (from x in _dbContext.UserRoles
-                                   join r in _dbContext.Roles on x.RoleId equals r.Id
-                                   where x.UserId == userInfo.Id
-                                   select new SessionUserVm()
-                                   {
+                                    join r in _dbContext.Roles on x.RoleId equals r.Id
+                                    where x.UserId == userInfo.Id
+                                    select new SessionUserVm()
+                                    {
                                         UserName = Input.Email,
                                         RoleName = r.Name
-                                   }).FirstOrDefault();
+                                    }).FirstOrDefault();
                     if (roleInfo != null)
                     {
-                        HttpContext.Session.SetString("roleName",roleInfo.RoleName);
+                        HttpContext.Session.SetString("roleName", roleInfo.RoleName);
                     }
                     _logger.LogInformation("User logged in.");
                     return LocalRedirect(returnUrl);
@@ -155,3 +133,5 @@ namespace U_OnlineBazer.Areas.Identity.Pages.Account
         }
     }
 }
+
+

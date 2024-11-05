@@ -86,7 +86,7 @@ namespace U_OnlineBazer.Areas.Admin.Controllers
             var isExist = await _roleManager.RoleExistsAsync(role.Name);
             if (isExist)
             {
-                ViewBag.mgs = "This role is aldeady exist";
+                ViewBag.message = "This role is aldeady exist !";
                 ViewBag.name = name;
                 return View();
             }

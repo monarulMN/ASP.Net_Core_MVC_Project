@@ -8,7 +8,7 @@ using U_OnlineBazer.Models;
 namespace U_OnlineBazer.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [Authorize]
+    //[Authorize]
     public class ProductController : Controller
     {
         private readonly ApplicationDbContext _dbContext;
@@ -20,7 +20,7 @@ namespace U_OnlineBazer.Areas.Admin.Controllers
             _webHostEnvironment = webHostEnvironment;
         }
 
-        [AllowAnonymous]
+        //[AllowAnonymous]
         public IActionResult Index()
         {
             List<Product> products = _dbContext.Products.Include(c => c.ProductTypes).Include(f => f.SpecialTags).ToList();

@@ -21,8 +21,12 @@ namespace U_OnlineBazer.Models
         public string Email { get; set; }
         [Required]
         public string Address { get; set; }
+       
+        //public int OrderId { get; set; }
+        //public string CustomerName { get; set; }
+        public decimal TotalAmount { get; set; }
         public DateTime OrderDate { get; set; }
-
+       
         public virtual List<OrderDetails> OrderDetails { get; set; }
 
     }
