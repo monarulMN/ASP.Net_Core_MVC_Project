@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Configuration;
@@ -23,11 +24,18 @@ internal class Program
         builder.Services.Configure<StripeSettings>(builder.Configuration.GetSection("Stripe"));
 
 
-        builder.Services.AddIdentity<IdentityUser, IdentityRole>(options => options.SignIn.RequireConfirmedAccount = true)
-            .AddEntityFrameworkStores<ApplicationDbContext>();
+        builder.Services.AddIdentity<IdentityUser, IdentityRole>(options =>
+        {
+            options.SignIn.RequireConfirmedAccount = true;
+            options.SignIn.RequireConfirmedEmail = false;
+        }).AddEntityFrameworkStores<ApplicationDbContext>();
+        //builder.Services.Configure<PasswordHasherOptions>(options =>
+        //    options.CompatibilityMode = PasswordHasherCompatibilityMode.IdentityV2
+        //);
         builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
 
         builder.Services.AddDistributedMemoryCache();
+        builder.Services.AddTransient<IEmailSender, NoOpEmailSender>();
         //builder.Services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
         builder.Services.AddSession(options =>

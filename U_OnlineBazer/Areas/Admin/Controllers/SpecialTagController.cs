@@ -6,7 +6,7 @@ using U_OnlineBazer.Models;
 namespace U_OnlineBazer.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    //[Authorize]
+    [Authorize]
     public class SpecialTagController : Controller
     {
         private readonly ApplicationDbContext _dbContext;

@@ -6,7 +6,7 @@ using U_OnlineBazer.Models;
 namespace U_OnlineBazer.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    //[Authorize(Roles = "Super user")]
+    [Authorize(Roles = "Admin")]
     public class ProductTypesController : Controller
     {
         private readonly ApplicationDbContext _dbContext;
@@ -16,7 +16,7 @@ namespace U_OnlineBazer.Areas.Admin.Controllers
             _dbContext = dbContext;
         }
 
-        //[AllowAnonymous]
+        [AllowAnonymous]
         public IActionResult Index()
         {
             //return View(_dbContext.ProductTypes.ToList());

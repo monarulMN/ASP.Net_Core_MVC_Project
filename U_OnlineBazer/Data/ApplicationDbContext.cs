@@ -12,6 +12,8 @@ namespace U_OnlineBazer.Data
             : base(options)
         {
         }
+        //New Query
+        //UPDATE dbo.Users SET EmailConfirmed='1'
 
         public DbSet<ProductType>ProductTypes { get; set; }
         public DbSet<SpecialTag> SpecialTags { get; set; }
