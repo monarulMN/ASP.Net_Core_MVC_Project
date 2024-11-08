@@ -8,7 +8,7 @@ using U_OnlineBazer.Models;
 namespace U_OnlineBazer.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [Authorize]
+    //[Authorize]
     public class ProductController : Controller
     {
         private readonly ApplicationDbContext _dbContext;

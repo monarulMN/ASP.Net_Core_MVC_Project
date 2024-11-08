@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("U_OnlineBazar")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cfc706260716056280789c42198bd2bd6f1c4e9e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8bbca40998189775bd17169e1588f64f77f1f239")]
 [assembly: System.Reflection.AssemblyProductAttribute("U_OnlineBazar")]
 [assembly: System.Reflection.AssemblyTitleAttribute("U_OnlineBazar")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
